@@ -33,7 +33,7 @@ export default function Login() {
         toast.success('Login successful')
         navigate('/')
       } else {
-        await authAPI.register({ name: name, email, password, role: 'admin' })
+        await authAPI.register({ name, email, password, role: 'admin' })
         toast.success('Account created! Please login')
         setIsLogin(true)
         setName('')
